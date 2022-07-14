@@ -16,6 +16,7 @@ For example, different styles were applied to a task based on its completion sta
 <img src="./public/images/styled-components.png" width="75%">
 
 ## Roadmap
+- [x] Save tasks in local storage
 - [x] Prevent creation of empty tasks
 - [x] Put new tasks on the top of the list
 - [x] Make tasks editable
