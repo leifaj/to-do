@@ -5,6 +5,7 @@ export const Filter = styled.section`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  color: black;
 
   button {
     font-family: "DM Sans", sans-serif;
@@ -13,6 +14,7 @@ export const Filter = styled.section`
     border-radius: 7px;
     background-color: white;
     font-size: 1rem;
+    color: black;
   }
 
   ${props => {
