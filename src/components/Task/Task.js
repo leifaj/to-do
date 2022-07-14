@@ -1,10 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTrash } from "@fortawesome/free-solid-svg-icons"
-import React, { useState} from "react"
+import React from "react"
 import * as S from "./Task.styled"
 
 export default function Task({task, tasks, setTasks}) {
-  const [text, setText] = useState(task.text)
 
   const handleDelete = (e) => {
     // filter & set the task list to all tasks that WEREN'T clicked on
@@ -17,7 +16,7 @@ export default function Task({task, tasks, setTasks}) {
   }
 
   const handleEdit = (e) => {
-    setText(e.target.value)
+    setTasks(tasks.map(item => (item.id === task.id) ? {...item, text: e.target.value} : item))
   }
 
   return (
@@ -25,7 +24,7 @@ export default function Task({task, tasks, setTasks}) {
         <button className="complete-btn" onClick={handleComplete}>
           <FontAwesomeIcon icon={faCheck} className="icon"/>
         </button>
-        <input type="text" onChange={handleEdit} value={text}/>
+        <input type="text" onChange={handleEdit} value={task.text}/>
         <button className="delete-btn" onClick={handleDelete}>
           <FontAwesomeIcon icon={faTrash} className="icon"/>
         </button>
