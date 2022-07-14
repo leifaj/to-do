@@ -65,5 +65,4 @@ export const Task = styled.li`
           )
       }
     }}
-
 `
